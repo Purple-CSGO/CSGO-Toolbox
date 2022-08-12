@@ -1,12 +1,13 @@
 <template>
 	<div class="bg">
-		<img src="/img/logo.png" class="logo fade-up-1" alt="" >
-		
+		<div class="fade-up-1" >
+			<img src="/img/logo.png" class="logo" alt="" >
+		</div>
 		<div class="fade-up-2 relative" >
 			<p class="title" >CSGO工具箱</p>
 			<span class="badge" >Beta</span>
 		</div>
-		<p class="slogan fade-up-3 fade-up-3" >一个给CSGO游戏的各个方面带来便利的工具集合</p>
+		<p class="slogan fade-up-3" >一个给CSGO游戏的各个方面带来便利的工具集合</p>
 		
 		<div class="btn-group fade-up-4" >
 			<button class="btn-download"  >
@@ -60,7 +61,7 @@ onMounted(async () => {
 }
 
 .logo {
-	@apply w-36 shadow-lg m-8;
+	@apply w-36 shadow-lg hover:shadow-xl duration-300 m-8;
 	border-radius: 32px;
 }
 
