@@ -1,5 +1,5 @@
 <template>
-	<div class="bg">
+	<div class="bg" v-cloak >
 		<div class="fade-up-1" >
 			<img src="/img/logo.png" class="logo" alt="" >
 		</div>
@@ -10,13 +10,13 @@
 		<p class="slogan fade-up-3" >一个为CSGO游戏的各个方面带来便利的工具集合</p>
 		
 		<div class="btn-group fade-up-4" >
-			<button class="btn-download" @click="download()"  >
+			<a href="https://api.upup.cool/get/csgo-toolbox" target="_blank" ><button class="btn-download">
 				下载
-			</button>
-			<button class="btn-repo" @click="repo()" >
-				<img src="/img/github-fill.svg" class="w-5" alt="" >
+			</button></a>
+			<a href="https://github.com/One-Studio/CSGO-Toolbox" target="_blank" ><button class="btn-repo">
+				<img src="/img/github-fill.svg" class="w-5" alt="github" >
 				项目
-			</button>
+			</button></a>
 		</div>
 		
 		<p class="text-xs opacity-70 tracking-wider fade-up-5" >当前版本：{{ version }}</p>
@@ -24,17 +24,6 @@
 </template>
 
 <script setup>
-
-// 下载
-const download = () => {
-	window.open("https://api.upup.cool/get/csgo-toolbox")
-}
-
-// 仓库
-const repo = () => {
-	window.open("https://github.com/One-Studio/CSGO-Toolbox")
-}
-
 // 版本号
 const { data: version } = await useFetch('/api/version')
 
@@ -63,6 +52,9 @@ body {
 	background: linear-gradient(270deg, rgba(233,181,181,0.62), #F2EAF1);
 }
 
+[v-cloak]{
+	display: none !important;
+}
 </style>
 
 <style scoped>
@@ -76,14 +68,22 @@ body {
 	border-radius: 32px;
 }
 
+
 .title {
-	@apply font-bold opacity-80;
+	@apply font-bold opacity-80 transition-all;
 	font-size: 56px;
 	line-height: 64px;
 }
 
+@media (max-width: 640px) {
+	.title {
+		font-size: 48px;
+		line-height: 56px;
+	}
+}
+
 .badge {
-	@apply rounded-full bg-white bg-opacity-80 text-[#555] font-normal absolute px-2 py-0.5 -top-1 -right-12;
+	@apply rounded-full bg-white bg-opacity-80 text-[#555] font-normal absolute px-2 py-0.5 -top-1 -right-11;
 	font-size: 10px;
 	line-height: 18px;
 }
