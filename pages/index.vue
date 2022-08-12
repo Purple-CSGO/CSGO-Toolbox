@@ -1,6 +1,6 @@
 <template>
 	<div class="bg">
-		<img src="/logo.png" class="logo" >
+		<img src="/img/logo.png" class="logo" alt="" >
 		
 		<div class=" relative" >
 			<p class="title" >CSGO工具箱</p>
@@ -13,21 +13,21 @@
 				<a href="https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/&amd64&&&.exe" target="_blank">下载</a>
 			</button>
 			<button class="btn-repo" >
-				<img src="/github-fill.svg" class="w-5" alt="" >
+				<img src="/img/github-fill.svg" class="w-5" alt="" >
 				<a href="https://github.com/One-Studio/CSGO-Toolbox" target="_blank" class="font-bold text-[#555]" >项目</a>
 			</button>
 		</div>
 		
-		<p class="text-xs opacity-70 tracking-wider" >当前版本：<span>{{version}}</span></p>
+		<p class="text-xs opacity-70 tracking-wider" >当前版本：0.0.9-alpha.11</p>
 	</div>
 </template>
 
-<script setup >
-// "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/version"
-const version = "0.0.9-alpha.11"
-// const download_url = "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/&amd64&&&.exe"
+<!--<script setup >-->
+<!--// "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/version"-->
+<!--// const version = "0.0.9-alpha.11"-->
+<!--// const download_url = "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/&amd64&&&.exe"-->
 
-</script>
+<!--</script>-->
 
 <style>
 * {
