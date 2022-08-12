@@ -4,6 +4,8 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
 	modules: [],
 	
+	ssr: false,
+	
 	css:[
 		"~/assets/css/tailwind.css"
 	],

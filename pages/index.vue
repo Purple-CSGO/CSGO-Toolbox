@@ -1,14 +1,14 @@
 <template>
 	<div class="bg">
-		<img src="/img/logo.png" class="logo" alt="" >
+		<img src="/img/logo.png" class="logo fade-up-1" alt="" >
 		
-		<div class=" relative" >
+		<div class="fade-up-2 relative" >
 			<p class="title" >CSGO工具箱</p>
 			<span class="badge" >Beta</span>
 		</div>
-		<p class="slogan" >一个给CSGO游戏的各个方面带来便利的工具集合</p>
+		<p class="slogan fade-up-3 fade-up-3" >一个给CSGO游戏的各个方面带来便利的工具集合</p>
 		
-		<div class="btn-group" >
+		<div class="btn-group fade-up-4" >
 			<button class="btn-download"  >
 				<a href="https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/&amd64&&&.exe" target="_blank">下载</a>
 			</button>
@@ -18,16 +18,28 @@
 			</button>
 		</div>
 		
-		<p class="text-xs opacity-70 tracking-wider" >当前版本：0.0.9-alpha.11</p>
+		<p class="text-xs opacity-70 tracking-wider fade-up-5" >当前版本：0.0.9-alpha.11</p>
 	</div>
 </template>
 
-<!--<script setup >-->
-<!--// "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/version"-->
-<!--// const version = "0.0.9-alpha.11"-->
-<!--// const download_url = "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/&amd64&&&.exe"-->
+<script setup >
+// "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/version"
+// const version = "0.0.9-alpha.11"
+// const download_url = "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/&amd64&&&.exe"
 
-<!--</script>-->
+const { $ScrollReveal } = useNuxtApp();
+
+onMounted(async () => {
+	await nextTick()
+	await $ScrollReveal().reveal('.fade-up-1', {delay: 400, duration: 1500, distance: '50px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
+	await $ScrollReveal().reveal('.fade-up-2', {delay: 550, duration: 1200, distance: '50px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
+	await $ScrollReveal().reveal('.fade-up-3', {delay: 750, duration: 1200, distance: '50px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
+	await $ScrollReveal().reveal('.fade-up-4', {delay: 900, duration: 1200, distance: '50px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
+	await $ScrollReveal().reveal('.fade-up-5', {delay: 1000, duration: 1200, distance: '50px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
+	// await $ScrollReveal().reveal('.fade-up-short', {duration: 1000, distance: '20px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always', delay: 200})
+})
+
+</script>
 
 <style>
 * {
