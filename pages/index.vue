@@ -10,12 +10,12 @@
 		<p class="slogan fade-up-3" >一个给CSGO游戏的各个方面带来便利的工具集合</p>
 		
 		<div class="btn-group fade-up-4" >
-			<button class="btn-download"  >
-				<a href="https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/&amd64&&&.exe" target="_blank">下载</a>
+			<button class="btn-download" @click="download()"  >
+				下载
 			</button>
-			<button class="btn-repo" >
+			<button class="btn-repo" @click="repo()" >
 				<img src="/img/github-fill.svg" class="w-5" alt="" >
-				<a href="https://github.com/One-Studio/CSGO-Toolbox" target="_blank" class="font-bold text-[#555]" >项目</a>
+				项目
 			</button>
 		</div>
 		
@@ -24,23 +24,31 @@
 </template>
 
 <script setup>
-// "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/version"
-// const download_url = "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/&amd64&&&.exe"
 
-let version = "0.0.9-alpha.11"
-const {data} = await useFetch("https://api.upup.cool/get/hlae/version")
-console.log(data)
-if (data === null || undefined) version = data
+// 下载
+const download = () => {
+	window.open("https://api.upup.cool/get/csgo-toolbox")
+}
 
+// 仓库
+const repo = () => {
+	window.open("https://github.com/One-Studio/CSGO-Toolbox")
+}
+
+// 版本号
+const { data: version } = await useFetch('/api/version')
+
+// 动画
 const { $ScrollReveal } = useNuxtApp();
 
+// 挂载
 onMounted(async () => {
 	await nextTick()
-	await $ScrollReveal().reveal('.fade-up-1', {delay: 200, duration: 1500, distance: '50px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
-	await $ScrollReveal().reveal('.fade-up-2', {delay: 350, duration: 1200, distance: '50px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
-	await $ScrollReveal().reveal('.fade-up-3', {delay: 550, duration: 1200, distance: '50px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
-	await $ScrollReveal().reveal('.fade-up-4', {delay: 700, duration: 1200, distance: '50px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
-	await $ScrollReveal().reveal('.fade-up-5', {delay: 900, duration: 1200, distance: '50px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
+	await $ScrollReveal().reveal('.fade-up-1', {delay: 200, duration: 1500, distance: '60px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
+	await $ScrollReveal().reveal('.fade-up-2', {delay: 350, duration: 1200, distance: '60px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
+	await $ScrollReveal().reveal('.fade-up-3', {delay: 550, duration: 1200, distance: '70px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
+	await $ScrollReveal().reveal('.fade-up-4', {delay: 700, duration: 1200, distance: '80px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
+	await $ScrollReveal().reveal('.fade-up-5', {delay: 850, duration: 1200, distance: '90px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always'})
 	// await $ScrollReveal().reveal('.fade-up-short', {duration: 1000, distance: '20px', animated: 'tada', reset: true, easing: 'cubic-bezier(.17,.62,.09,.97)', useDelay: 'always', delay: 200})
 })
 
@@ -49,12 +57,6 @@ onMounted(async () => {
 <style>
 * {
 	font-family: -apple-system, "PingFang SC", "Microsoft YaHei", system-ui, Arial, serif;
-}
-
-
-[v-cloak]{
-	display: none !important;
-	transition: none;
 }
 </style>
 
@@ -88,7 +90,7 @@ onMounted(async () => {
 }
 
 .btn-group {
-	@apply flex gap-2 mt-6 mb-4;
+	@apply flex gap-3 mt-6 mb-4;
 }
 
 .btn-download {
