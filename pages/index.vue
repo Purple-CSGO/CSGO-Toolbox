@@ -10,7 +10,7 @@
 		
 		<div class="btn-group" >
 			<button class="btn-download"  >
-				<a :href="download_url" target="_blank">下载</a>
+				<a href="https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/&amd64&&&.exe" target="_blank">下载</a>
 			</button>
 			<button class="btn-repo" >
 				<img src="/github-fill.svg" class="w-5" alt="" >
@@ -25,7 +25,7 @@
 <script setup >
 // "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/version"
 const version = "0.0.9-alpha.11"
-const download_url = "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/&amd64&&&.exe"
+// const download_url = "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/&amd64&&&.exe"
 
 </script>
 
