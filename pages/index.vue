@@ -19,16 +19,18 @@
 			</button>
 		</div>
 		
-		<p class="text-xs opacity-70 tracking-wider fade-up-5" >当前版本：0.0.9-alpha.11</p>
+		<p class="text-xs opacity-70 tracking-wider fade-up-5" >当前版本：{{ version }}</p>
 	</div>
 </template>
 
-<script setup >
+<script setup>
 // "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/version"
-// const version = "0.0.9-alpha.11"
 // const download_url = "https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/&amd64&&&.exe"
 
-useFetch("https://api.upup.cool/repo/One-Studio/CSGO-Toolbox/version")
+let version = "0.0.9-alpha.11"
+const {data} = await useFetch("https://api.upup.cool/get/hlae/version")
+console.log(data)
+if (data === null || undefined) version = data
 
 const { $ScrollReveal } = useNuxtApp();
 
