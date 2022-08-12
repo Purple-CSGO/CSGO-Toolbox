@@ -7,7 +7,7 @@
 			<p class="title" >CSGO工具箱</p>
 			<span class="badge" >Beta</span>
 		</div>
-		<p class="slogan fade-up-3" >一个给CSGO游戏的各个方面带来便利的工具集合</p>
+		<p class="slogan fade-up-3" >一个为CSGO游戏的各个方面带来便利的工具集合</p>
 		
 		<div class="btn-group fade-up-4" >
 			<button class="btn-download" @click="download()"  >
@@ -58,12 +58,17 @@ onMounted(async () => {
 * {
 	font-family: -apple-system, "PingFang SC", "Microsoft YaHei", system-ui, Arial, serif;
 }
+
+body {
+	background: linear-gradient(270deg, rgba(233,181,181,0.62), #F2EAF1);
+}
+
 </style>
 
 <style scoped>
 .bg {
 	@apply w-[100vw] h-[100vh] p-4 flex flex-col content-center items-center justify-center text-center;
-	background: linear-gradient(270deg, rgba(233,181,181,0.62), #F2EAF1);
+	//background: linear-gradient(270deg, rgba(233,181,181,0.62), #F2EAF1);
 }
 
 .logo {
