@@ -6,7 +6,7 @@
 
 [![stars](https://img.shields.io/github/stars/One-Studio/CSGO-Toolbox.svg?style=flat&color=green)](https://github.com/One-Studio/CSGO-Toolbox)
 [![fork](https://img.shields.io/github/forks/One-Studio/CSGO-Toolbox.svg?style=flat&color=critical)](https://github.com/One-Studio/CSGO-Toolbox)
-[![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?style=flat)](https://github.com/One-Studio/CSGO-Toolbox##捐赠)
+[![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?style=flat)](https://github.com/One-Studio/CSGO-Toolbox#捐赠)
 [![release](https://img.shields.io/github/release/One-Studio/CSGO-Toolbox.svg?style=flat&color=blue)](https://github.com/One-Studio/CSGO-Toolbox/releases)
 
 </div>
