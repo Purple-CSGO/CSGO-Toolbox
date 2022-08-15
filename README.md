@@ -19,7 +19,7 @@ CSGO工具箱旨在游戏的各个方面给玩家带来便利，如设置的修�
 
 ### 技术栈
 
-框架：[Wails](https://wails.io/) + [NuxtJS](https://v3.nuxtjs.org/)
+框架：[Wails](https://wails.io/) + [Vue.js](https://vuejs.org/)
 
 语言：Go + TypeScript + HTML + CSS ( TailwindCSS + SCSS )
 
