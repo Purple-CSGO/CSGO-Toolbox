@@ -17,6 +17,10 @@ CSGO工具箱旨在游戏的各个方面给玩家带来便利，如设置的修�
 
 > 代码闭源，本仓库仅为官网代码
 
+<div align="center" >
+  <img src="https://api.star-history.com/svg?repos=One-Studio/CSGO-Toolbox&type=Date" alt="Star History Chart" style="width: 50%;" />
+</div>
+
 ### 技术栈
 
 框架：[Wails](https://wails.io/) + [Vue.js](https://vuejs.org/)
@@ -48,7 +52,7 @@ CSGO工具箱旨在游戏的各个方面给玩家带来便利，如设置的修�
 
 #### 核心
 
-- [ ] 前后端代码重构
+- [x] 前后端代码重构
 - [ ] 用户活跃度统计
 - [ ] 代码格式化 eslint + prettier
 - [ ] i18n 多语言支持
@@ -63,7 +67,7 @@ CSGO工具箱旨在游戏的各个方面给玩家带来便利，如设置的修�
 
 #### 界面
 
-- [ ] 升级v3界面（类 Fluent Design）
+- [x] 升级v3界面（类 Fluent Design）
 - [ ] 深色模式 Dark Mode
 - [ ] 实时公告
 - [ ] 关于页面
@@ -95,7 +99,7 @@ CSGO工具箱旨在游戏的各个方面给玩家带来便利，如设置的修�
 
 #### 录像
 
-- [ ] demo解析数据
+- [x] demo解析数据
 - [ ] hlae启动选项 打开对话框选择路径
 - [ ] demo组织管理功能 拖拽文件自动解压改名
 - [ ] 多文件夹支持
