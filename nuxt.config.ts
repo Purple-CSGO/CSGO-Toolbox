@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from 'nuxt/config'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -14,23 +14,19 @@ export default defineNuxtConfig({
 			"viewport": "width=device-width, initial-scale=1"
 		}
 	},
-	
+
 	modules: [],
-	
+
 	ssr: false,
-	
-	css:[
+
+	css: [
 		"~/assets/css/tailwind.css"
 	],
-	
-	build: {
-		postcss: {
-			postcssOptions: {
-				plugins: {
-					tailwindcss: {},
-					autoprefixer: {},
-				},
-			},
+
+	postcss: {
+		plugins: {
+			tailwindcss: {},
+			autoprefixer: {},
 		},
-	}
+	},
 })

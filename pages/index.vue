@@ -3,7 +3,7 @@
 		<div class="fade-up-1" >
 			<img src="/img/logo.png" class="logo" alt="" >
 		</div>
-		<div class="fade-up-2 relative" >
+		<div class="relative fade-up-2" >
 			<p class="title" >CSGO工具箱</p>
 			<span class="badge" >Beta</span>
 		</div>
@@ -19,7 +19,7 @@
 			</button></a>
 		</div>
 		
-		<p class="text-xs opacity-70 tracking-wider fade-up-5" >当前版本：{{ version }}</p>
+		<p class="text-xs tracking-wider opacity-70 fade-up-5" >当前版本：{{ version }}</p>
 	</div>
 </template>
 
@@ -60,7 +60,6 @@ body {
 <style scoped>
 .bg {
 	@apply w-[100vw] h-[100vh] p-4 flex flex-col content-center items-center justify-center text-center;
-	//background: linear-gradient(270deg, rgba(233,181,181,0.62), #F2EAF1);
 }
 
 .logo {
